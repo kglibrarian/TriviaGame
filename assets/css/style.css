@@ -1,0 +1,14 @@
+/* Global Fonts
+font-family: 'Rammetto One', cursive; */
+
+h1 {
+    font-family: 'Rammetto One', cursive; 
+    color: white; 
+}
+
+.jumbotron {
+    background-color: navy}
+
+/* .body{
+    background-image: url(../images/background-1913529_1920.jpg)
+} */
