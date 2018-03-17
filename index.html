@@ -24,69 +24,28 @@
             <h1>Library Trivia Game</h1>
             </div>
     </header>
-    <section>
-        <article>
-
-            <div>
-                <button class="js-start"> Do you want to play? </button>
-            </div>
-
-            <div class="js-question"></div>
+    <section class="container">
+        <div class="row">
+            <article class="article col-xs-12 col-sm-8 col-md-8 py-2 ">
+                <div class="js-question p-2"></div>
+                <!-- <div class="js-answer"></div> -->
+                <!-- <div class="js-image"></div> -->
+                
+             
+            </article>
             
-            <div>
-                <button class="js-stop"> Stop the Game </button>
-            </div>
-
-            <!-- <div>
-            <p class="question1">1. From 1883 – 1929, Andrew Carnegie is credited with 
-                spending $55 million of his own fortune to open how many libraries, 
-                including my very own Wellington Public Library? </p>
-                    a. 1,876
-                    b. 2,509
-                    c. 3,245
-                    d. 4,012
-                </div>        
-                <p>    2. Which famous librarian went on to rename the Bureau of Investigation to the Federal Bureau of Investigation, and head the agencies under eight different presidents?
-                    
-                3. Libraries have long inspired musicians, writers, and artists. Name the artist behind the raucous anthem “The Library” with lyrics such as
-                “The library, the library
-                Is the perfect place for me,
-                The library, the library,
-                You can hang out all day and it doesn’t cost a penny
-                The library, the library
-                Is the perfect place for me,
-                The library, the library
-                It’s such a big part of our community”
-                    
-                    4. In a recent Pew survey, what percent of Americans said their community would be impacted if the local public library closed?
-                    a. 65%
-                    b. 23%
-                    c. 90%
-                    d. 50%
-                    
-                    5. Who founded the nation’s first lending library in 1731?
-                    
-                    6. How long is the bookshelf space at the Library of Congress?
-                    a. 838 miles
-                    b. 20 miles
-                    c. 150 miles
-                    d. 546 miles
-                    
-                    7. What book is most often stolen from public libraries?
-                    
-                    8. Give the first name of Mr. Dewey of Dewey Decimal Classification System fame.
-                    
-                    9. What was the outcome of the Authors Guild v. Google case, which questions the legality of Google’s searchable book database and has significant implications for libraries?
-                    
-                    10. What is the only university in Kansas to offer an accredited Master’s Program for Library and Information Studies?
-
-
-            </p> -->
-
-        </article>
-
-
-
+            <aside class="aside col-xs-12 col-sm-4 col-md-4 py-2 align-items-center">   
+                    <div class="js-correct-alert"></div>
+                    <div class="js-incorrect-alert"></div>    
+                    <div class="cs-timer row justify-content-center">
+                        <h2>Timer</h2>
+                        <p class="js-timer"></p></div>
+                    <div class="cs-button row"><button class="js-start"> Start Game </button></div>
+                    <div class="cs-button row "><button class="js-stop"> Stop Game </button></div>
+                    <div class="js-final-message"></div>
+                </aside>
+            
+        </div>   
     </section>
             
     <script src="./assets/javascript/app.js"></script>
