@@ -137,13 +137,20 @@ $(document).ready(function(){
                     alert("Wrong Answer!");
                     $('.js-incorrect-alert').html('<p>' + "InCorrect Answer!" + '</p>');
                     incorrect++
+                }
+                if (currentQuestion === 9) {
+                    displayFinalScore();
+                } else {
+                    currentQuestion++
                 };
-                // currentQuestion = currentQuestion+1;
-                currentQuestion++
-                reset();
+                
+                
+  
                     
                 // displayQuestion(currentQuestion);
         };
+
+        
     
         function displayFinalScore () {
             let correctDiv = ('<div>' + "Correct Answers: " + correct + '</div>');
@@ -163,49 +170,33 @@ $(document).ready(function(){
             $('.js-incorrect-alert').empty();
         }
     
-        // function run() {
-         
-        //   clearInterval(intervalId);
-        //   intervalId = setInterval(decrement, 1000);
-        // }
-        
-        function run() {
-            clearInterval(intervalId);
-            intervalId = setInterval(decrement, 1000);
     
-          }
+    function run() {
+        clearInterval(intervalId);
+        intervalId = setInterval(decrement, 1000);
+    }
     
-        function decrement() {
-            number--;
-            $(".js-timer").html("<h2>" + number + "</h2>");
+    function decrement() {
+        number--;
+        $(".js-timer").html("<h2>" + number + "</h2>");
             if (number === 0) {
                 stop();
                 checkAnswer();
-                reset();
-                // empty();
-                // displayQuestion(newQuestion);
+                setTimeout(gameReset, 3000);
             }
-        }
+        };
     
         function stop() {
             clearInterval(intervalId);
         }
         
-    function reset () {
-        if (currentQuestion === 10) {
-            empty();
-            displayFinalScore();
-            stop();
-        } else {
-            empty();
-        // currentQuestion = currentQuestion+1;
-            // currentQuestion++
-            console.log(currentQuestion);
-            number = 10;
-            displayQuestion(currentQuestion);
-            run();
-        };
-    ;}
+    function gameReset () {
+        number = 10;
+        empty();
+        displayQuestion(currentQuestion);
+        run();
+    };
+    
     
     
     // Events ------------------------
@@ -218,9 +209,9 @@ $(document).ready(function(){
         }); 
     
         $('.js-stop').on('click', function  () {
-            stop()
+            stop();
+            empty();
             alert("Game is Stopped!")
-            reset();
            
         }); 
             
