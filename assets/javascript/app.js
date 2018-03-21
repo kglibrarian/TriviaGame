@@ -9,7 +9,7 @@ $(document).ready(function(){
     
 //Global Variables ---------------
         var number = 10;
-        var currentQuestion=9;
+        var currentQuestion=0;
         var intervalId;
         let correct = 0;
         let incorrect = 0;
